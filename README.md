@@ -75,7 +75,8 @@ This section will review the electronic components of the build. It will explain
 
 ### Electric Diagram
 
-![Electric Diagram](Images/CircuitBoard/Pi-Hole_LED_System.png)
+![Electric Diagram](assets/img/CircuitBoard/Pi-Hole_LED_System.png)
+
 The circuit is made of two distinct elements. First there is the LED Bar graph and second, the activity light module.
 The first module takes the 3.3V rail of the Raspberry Pi and provide power to all 10 LED of the bar graph. Each LED of the bar graph are then connected to a GPIO. In this module, the light of the LED will be powered on when the output of the GPIO pin is set to LOW as the GPIO pin will act as a ground in that case. Inversely, the LED will be off if the GPIO output is set to HIGH.
 The second module works in the opposite way. The LED positive is connected to the GPIO. The negative is connected to ground. In this module, the LED is powered on when the output of the GPIO pin is set to HIGH.
@@ -84,7 +85,7 @@ The second module works in the opposite way. The LED positive is connected to th
 
 #### Testting the prototype
 
-![BreadBoard Diagram](Images/CircuitBoard/Pi-Hole_LED_Breadboard.png)
+![BreadBoard Diagram](assets/img/CircuitBoard/Pi-Hole_LED_Breadboard.png)
 
 During the prototyping phase, make sure that everything is connected according to the exemple above and then connect to the Raspberry Pi.
 Make sure to use an appropriate resistor in the circuit. Make sure that every LED as its own resistor. An LED can draw to much current which could damage the Raspberry Pi GPIO.
@@ -108,7 +109,7 @@ The following are the permenant modules that we will install in the build. Be ca
 
 | Front | Back |
 | --- | --- |
-| <img src="Images/CircuitBoard/Pi-Hole_LEDBarGraph-Front.png" alt="LED Bar Graph Module - Front" height="350"> | <img src="Images/CircuitBoard/Pi-Hole_LEDBarGraph-Back.png" alt="LED Bar Graph Module - Back" height="350"> |
+| <img src="assets/img/CircuitBoard/Pi-Hole_LEDBarGraph-Front.png" alt="LED Bar Graph Module - Front" height="350"> | <img src="assets/img/CircuitBoard/Pi-Hole_LEDBarGraph-Back.png" alt="LED Bar Graph Module - Back" height="350"> |
 
 For the LED Bar Graph, make sure that you know which side is the positive. Remember that an LED is a diode and diode will only let current pass from the positive to the negative and not the other way around. I suggest you place all the complonent in the perfBoard without solder first to verify if you are confortable with the design. After you feel ready to start the soldering, go at it one piece at a time. Always start by securing the corners of parts that have more than two pins.
 
@@ -122,7 +123,7 @@ After that make sure to connect the resistor>LED and then LED>Pin Header in dist
 
 | Front | Back |
 | --- | --- |
-| <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-front.png" alt="Activity LED Module - Front" height="250"> | <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-Back.png" alt="Activity LED Module - Back" height="250"> |
+| <img src="assets/img/CircuitBoard/Pi-Hole_ActivityLED-front.png" alt="Activity LED Module - Front" height="250"> | <img src="assets/img/CircuitBoard/Pi-Hole_ActivityLED-Back.png" alt="Activity LED Module - Back" height="250"> |
 
 For this module, a slight modification is required to the straight pin header. On a flat surface, press the short pin side until it slip right up to the plastic part. This mod will let us mount the pin header under the perfBoard leting us connect fro the back instead of the front of the module.
 
