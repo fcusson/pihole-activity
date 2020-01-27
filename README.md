@@ -56,7 +56,7 @@ This is the Raspberry Pi that was used for my build. Any other Raspberry Pi coul
 This section will review the electronic components of the build. It will explain how the system works, how to prototype, test and make the permanent modules for the build.
 
 ### Electric Diagram
-![Electric Diagram](/images/CircuitBoard/Pi-Hole_LED_System.png)
+![Electric Diagram](Images\CircuitBoard\Pi-Hole_LED_System.png)
 ### BreadBoard Prototype
 ### Permanent Modules
 #### LED Bar Graph Module
