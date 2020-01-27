@@ -18,12 +18,12 @@ This project’s goal is to enclose a pi-hole server in a project box with added
 | 220Ω resistor | | 12 | |
 | Single Row Right Angle Pin Header | | 11 | |
 | Single Row Pin Header | | 3 | |
-| Female to Female Jumper wires<sup>*</sup> | | 14 | |
+| Female to Female Jumper wires<sup>1</sup> | | 14 | |
 | PerfBoard | | 1 | |
-| 115x80x40 Project Box<sup>**</sup> | | 1 | |
+| 115x80x40 Project Box<sup>2</sup> | | 1 | |
 
-<sup>*</sup>Ideally look for jumper cable in ribbon style so you can keep bundles together for each circuit.
-<sup>**</sup>The size provided is based on a Raspberry Pi Zero W with an ethernet to micro USB adapter. I suggest you draw everything to size and make sure everything fits before commiting to a project box size.
+<sup>1</sup>Ideally look for jumper cable in ribbon style so you can keep bundles together for each circuit.
+<sup>2</sup>The size provided is based on a Raspberry Pi Zero W with an ethernet to micro USB adapter. I suggest you draw everything to size and make sure everything fits before commiting to a project box size.
 
 ### For prototyping
 
@@ -33,10 +33,10 @@ If it's not your first Raspberry Pi project, you should have most of these item.
 | ----------- | ---- | -------- | ----- |
 | Male-to-Male Jumper wires |  | 16 |  |
 | BreadBoard |  | 1 |  |
-| Raspberry Pi GPIO Extender Shield<sup>*</sup> |  | 1 |  |
+| Raspberry Pi GPIO Extender Shield<sup>1</sup> |  | 1 |  |
 | BreadBoard power supply<sup>1</sup> |  | 1 |  |
 
-<sup>*</sup>These two elements are optional, but helps a lot in the prototyping phase.
+<sup>1</sup>These two elements are optional, but helps a lot in the prototyping phase.
 
 ### General 
 
@@ -58,9 +58,9 @@ This is the Raspberry Pi that was used for my build. Any other Raspberry Pi coul
 - Ethernet to micro USB adapter
 - 5v 2.5a micro USB power supply
 - 32 Gb micro SD card
-- 20x2 Pin Header (optionnal, but will simplify the connection to the Raspberry Pi Zero)<sup>*</sup>
+- 20x2 Pin Header (optionnal, but will simplify the connection to the Raspberry Pi Zero)<sup>1</sup>
 
-<sup>*</sup>This part is not required but will make any upgrade or changes to the build much easier down the line, as you will not be soldering the jumper wires directly to the board itself.
+<sup>1</sup>This part is not required but will make any upgrade or changes to the build much easier down the line, as you will not be soldering the jumper wires directly to the board itself.
 
 ## Circuit Board
 
