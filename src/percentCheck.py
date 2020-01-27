@@ -28,14 +28,12 @@ def loop():
 	statusOld="disabled"
 
 	while True:
+		
 		# Get percent Blocked
 		pihole = requests.get("http://127.0.0.1/admin/api.php?summaryRaw").json()
 		percentNew = int(round(pihole['ads_percentage_today']))
 		statusNew = str(pihole['status'])
-		print(statusNew)
 
-
-		print(percentNew)
 		numberOfLed = int(round(percentNew/10))
 
 		# Check if percentNew is different from percentOld
@@ -67,10 +65,8 @@ def loop():
 			#change led status depnding on status of Pi-Hole
 			if statusNew == "enabled" :
 				GPIO.output(enPin, GPIO.HIGH)
-				#print("Pi-Hole is enabled")
 			else :
 				GPIO.output(enPin, GPIO.LOW)
-				#print("Pi-Hole is disabled")
 
 		# Wait before refresh
 		time.sleep(waitTime)
