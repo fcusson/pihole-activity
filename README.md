@@ -95,7 +95,7 @@ The second module works in the opposite way. The LED positive is connected to th
 
 | Front | Back |
 | --- | --- |
-| <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-Front.png" alt="Activity LED Module - Front" height="250"> | <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-Back.png" alt="Activity LED Module - Back" height="250"> |
+| <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-front.png" alt="Activity LED Module - Front" height="250"> | <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-Back.png" alt="Activity LED Module - Back" height="250"> |
 
 ## Installation
 
