@@ -13,7 +13,7 @@ This project’s goal is to enclose a pi-hole server in a project box with added
 ### For the final build
 
 | Description | Link | Quantity | Price |
-| ----------- | ---- | -------- | ----- |
+| ----------- | ---- | -------- | -----: |
 | 10 segments red LED Bar Graph | [AliExpress](https://www.aliexpress.com/item/32811943871.html?spm=a2g0o.productlist.0.0.385757df1b2Lr8&algo_pvid=81b6ea2e-bbe1-4634-9305-ca7d9543ac35&algo_expid=81b6ea2e-bbe1-4634-9305-ca7d9543ac35-16&btsid=0844ca98-45f0-41d7-bb55-1833f7978391&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $1.96 |
 | Red LED | [AliExpress](https://www.aliexpress.com/item/32848810276.html?spm=a2g0o.productlist.0.0.171f3220F091HR&algo_pvid=c14c42e9-d51a-4a9e-89f0-08dd5290a215&algo_expid=c14c42e9-d51a-4a9e-89f0-08dd5290a215-0&btsid=ec5c1224-9eb1-462d-99e7-e5065f9670da&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2.10 |
 | Green LED | See Red LED link | 1 | ($2.10) |
