@@ -14,3 +14,5 @@ This project’s goal is to enclose a pi-hole server in a project box with added
 ### Permanent Modules
 #### LED Bar Graph Module
 #### Activity LED Module
+## Author
+- Felix Cusson - [Darkfull-Dante](https://github.com/Darkfull-Dante)
