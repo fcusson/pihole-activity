@@ -165,6 +165,8 @@ Making the module is very similar to the LED Bar Graph. Make sure the module mak
 
 ## Installation
 
+## Contribution
+
 ## Author
 
 - Felix Cusson - [Darkfull-Dante](https://github.com/Darkfull-Dante)
