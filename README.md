@@ -22,7 +22,7 @@ This project’s goal is to enclose a pi-hole server in a project box with added
 | Single Row Pin Header | [AliExpress](https://www.aliexpress.com/item/32864438850.html?spm=a2g0o.productlist.0.0.681450a7FeeBYB&algo_pvid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7&algo_expid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7-3&btsid=ea84bad1-90d4-40b7-b416-35f83d260430&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 3 | $1.15 |
 | Female to Female Jumper wires<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32970738923.html?spm=a2g0o.productlist.0.0.1a901f77473scE&algo_pvid=e09dda4f-6fd1-449f-b578-b6c221d9ad42&algo_expid=e09dda4f-6fd1-449f-b578-b6c221d9ad42-5&btsid=8983d517-3a9c-4c34-a5d8-cce2eef956f6&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 14 | $1.79 |
 | PerfBoard | [AliExpress](https://www.aliexpress.com/item/4000070053237.html?spm=a2g0o.productlist.0.0.2eec3d788PBCPE&algo_pvid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63&algo_expid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63-0&btsid=57cc4798-1fe0-40f7-9108-75111384779f&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $4.34 |
-| 125x80x32 Project Box<sup>2</sup> | [AliExpress](https://www.aliexpress.com/item/4000370053139.html?spm=a2g0o.productlist.0.0.408e192bQLTqkU&algo_pvid=97080f62-6f11-4e65-81b8-9a35ded55a47&algo_expid=97080f62-6f11-4e65-81b8-9a35ded55a47-11&btsid=e4c17289-1d4c-4c17-89ac-bb3a64ffd2d2&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2,74 |
+| 125x80x32 Project Box<sup>2</sup> | [AliExpress](https://www.aliexpress.com/item/4000370053139.html?spm=a2g0o.productlist.0.0.408e192bQLTqkU&algo_pvid=97080f62-6f11-4e65-81b8-9a35ded55a47&algo_expid=97080f62-6f11-4e65-81b8-9a35ded55a47-11&btsid=e4c17289-1d4c-4c17-89ac-bb3a64ffd2d2&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2.74 |
 |  |  | Total | $17.53 |
 
 <sup>1</sup>Ideally look for jumper cable in ribbon style so you can keep bundles together for each circuit.
@@ -35,11 +35,12 @@ All prices include shipping and most of them comes in far greater quantity than 
 If it's not your first Raspberry Pi project, you should have most of these item. They will not be permanent to the build and will be reusable afterward.
 
 | Description | Link | Quantity | Price |
-| ----------- | ---- | -------- | ----- |
-| Male-to-Male Jumper wires |  | 16 |  |
-| BreadBoard |  | 1 |  |
-| Raspberry Pi GPIO Extender Shield<sup>1</sup> |  | 1 |  |
-| BreadBoard power supply<sup>1</sup> |  | 1 |  |
+| ----------- | ---- | -------- | -----: |
+| BreadBoard | [AliExpress](https://www.aliexpress.com/item/32785972837.html?spm=a2g0o.productlist.0.0.588066889qfiHt&algo_pvid=35c004a7-f7ef-4c65-97eb-02e0c75670ad&algo_expid=35c004a7-f7ef-4c65-97eb-02e0c75670ad-1&btsid=50ac37d2-b7ec-47da-886d-6547f8840089&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $3.17 |
+| Male-to-Male Jumper wires | See BreadBoard link | 16 | ($3.17) |
+| Raspberry Pi GPIO Extender Shield<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32848985668.html?spm=a2g0o.productlist.0.0.7e095c217oIqpL&algo_pvid=4b476850-da21-4508-becb-ca6b5207066e&algo_expid=4b476850-da21-4508-becb-ca6b5207066e-0&btsid=bd865da9-0e32-4812-8084-7d21c8173138&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $1.80 |
+| BreadBoard power supply<sup>1</sup> | See BreadBoard link | 1 | ($3.17) |
+|  |  | Total | $4.97 |
 
 <sup>1</sup>These two elements are optional, but helps a lot in the prototyping phase.
 
