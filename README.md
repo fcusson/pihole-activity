@@ -55,6 +55,7 @@ This list of item are purely equipment that will be need to do the build like I 
 - Electric drill
 - Exacto
 - Hot Glue Gun
+- Multimeter
 
 ### Raspberry Pi equipment
 
@@ -97,9 +98,11 @@ When everything is connected and the Raspberry Pi is turned on, run the LEDCheck
 
 #### Running the scripts
 
-Now it is time to test code in action. 
+Now it is time to test code in action.
 
 ### Permanent
+
+The following are the permenant modules that we will install in the build. Be carefull at this point as the module are made to be permanent. Make sure the design fits for your particular case and that the wiring replicate the prototype we made.
 
 #### LED Bar Graph Module
 
@@ -107,11 +110,23 @@ Now it is time to test code in action.
 | --- | --- |
 | <img src="Images/CircuitBoard/Pi-Hole_LEDBarGraph-Front.png" alt="LED Bar Graph Module - Front" height="350"> | <img src="Images/CircuitBoard/Pi-Hole_LEDBarGraph-Back.png" alt="LED Bar Graph Module - Back" height="350"> |
 
+For the LED Bar Graph, make sure that you know which side is the positive. Remember that an LED is a diode and diode will only let current pass from the positive to the negative and not the other way around. I suggest you place all the complonent in the perfBoard without solder first to verify if you are confortable with the design. After you feel ready to start the soldering, go at it one piece at a time. Always start by securing the corners of parts that have more than two pins.
+
+Don't be affraid to bend the metal legs, they will help keep the parts in place when soldering. When your done soldering the parts, cut the excess from the metal legs of the parts.
+
+When you are ready to do the back tracing, make sure to reference where you are soldering as to not make mistake in the soldering lines you'll make. All the resistors should be connected on the same line connecting to one single right angle pin header. That will be were we connect the 3.3v rail.
+
+After that make sure to connect the resistor>LED and then LED>Pin Header in distinct line. Each LED should have its one unique line of solder directing the current to the pins header.
+
 #### Activity LED Module
 
 | Front | Back |
 | --- | --- |
 | <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-front.png" alt="Activity LED Module - Front" height="250"> | <img src="Images/CircuitBoard/Pi-Hole_ActivityLED-Back.png" alt="Activity LED Module - Back" height="250"> |
+
+For this module, a slight modification is required to the straight pin header. On a flat surface, press the short pin side until it slip right up to the plastic part. This mod will let us mount the pin header under the perfBoard leting us connect fro the back instead of the front of the module.
+
+Making the module is very similar to the LED Bar Graph. Make sure the module makes sense to you and that you are confortable soldering the parts. This one might be more difficult as it is more compact. A helping hand comes in very handy.
 
 ## Installation
 
