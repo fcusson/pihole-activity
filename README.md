@@ -19,6 +19,7 @@ This project’s goal is to enclose a pi-hole server in a project box with added
 
 <sup>1</sup>Ideally look for jumper cable in ribbon style so you can keep bundles together for each circuit.
 <sup>2</sup>The size provided is based on a Raspberry Pi Zero W with an ethernet to micro USB adapter. I suggest you draw everything to size and make sure everything fits before commiting to a project box size.
+
 ### For prototyping
 If it's not your first Raspberry Pi project, you should have most of these item. They will not be permanent to the build and will be reusable afterward.
 
@@ -30,6 +31,7 @@ If it's not your first Raspberry Pi project, you should have most of these item.
 | BreadBoard power supply<sup>1</sup> |  | 1 |  |
 
 <sup>These two elements are optional, but helps a lot in the prototyping phase.</sup>
+
 ### General Equipment
 This list of item are purely equipment that will be need to do the build like I did. You can use any other methods of your likng to get to the same result.
 - Soldering Iron
@@ -39,18 +41,25 @@ This list of item are purely equipment that will be need to do the build like I 
 - Electric drill
 - Exacto
 - Hot Glue Gun
+
 ### Raspberry Pi equipment
 This is the Raspberry Pi that was used for my build. Any other Raspberry Pi could work for the build, but the size and way the wiring was made is based on this form factor.
 - Raspberry Pi Zero W
 - Ethernet to micro USB adapter
 - 5v 2.5a micro USB power supply
 - 32 Gb micro SD card
-## Installation
+- 20x2 Pin Header (optionnal, but will simplify the connection to the Raspberry Pi Zero)<sup>1</sup>
+
+<sup>1</sup>This part is not required but will make any upgrade or changes to the build much easier down the line, as you will not be soldering the jumper wires directly to the board itself.
+
 ## Circuit Board
+This section will review the electronic components of the build. It will explain how the system works, how to prototype, test and make the permanent modules for the build.
+
 ### Electric Diagram
 ### BreadBoard Prototype
 ### Permanent Modules
 #### LED Bar Graph Module
 #### Activity LED Module
+## Installation
 ## Author
 - Felix Cusson - [Darkfull-Dante](https://github.com/Darkfull-Dante)
