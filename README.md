@@ -8,6 +8,12 @@ This project’s goal is to enclose a pi-hole server in a project box with added
 
 ## Cloning the repository to your Pi-Hole
 
+Access your pi-hole terminal via your prefered way. In the case of my setup, I access it through SSH
+
+```
+git clone https://github.com/Darkfull-Dante/pihole-activity.git
+```
+
 ## Bill of material
 
 ### For the final build
@@ -91,6 +97,34 @@ During the prototyping phase, make sure that everything is connected according t
 Make sure to use an appropriate resistor in the circuit. Make sure that every LED as its own resistor. An LED can draw to much current which could damage the Raspberry Pi GPIO.
 LEDs are a kind of diodes, which means that current can only go through a certain direction. For the circuit to work, you must make sure that the positive is connected on the side receiving current to work. The positive side of an LED is always the longer leg. In the case of the LED bar graph, there is no visual way to know the positive side other than testing. If at first the bar graph doesn’t light, simply rotate 180 degree and retest. (quick tip: mark the positive side of the LED bar graph for future reference).
 When everything is connected and the Raspberry Pi is turned on, run the LEDCheck.py python code. This code will cycle through the 12 LED of the modules. The LED should light up in the following order: LED 1 to 10 of the LED bar graph (in order), green LED, red LED.
+
+When everything is connected to your liking, move the test folder of the repository
+```
+cd ~/home/pi/pihole-activity/src
+```
+
+then run the python script called LEDCycle
+```
+python3 LEDCycle.py
+```
+
+you should get the following result without errors
+```
+Bar Graph LED 1 on
+Bar Graph LED 2 on
+Bar Graph LED 3 on
+Bar Graph LED 4 on
+Bar Graph LED 5 on
+Bar Graph LED 6 on
+Bar Graph LED 7 on
+Bar Graph LED 8 on
+Bar Graph LED 9 on
+Bar Graph LED 10 on
+Status LED on
+ad Blocked LED on
+```
+
+While the code run, make sure that all the LED turn on correctly and in the right order. Make the necessary changes if need be.
 
 #### Troubleshooting
 
