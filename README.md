@@ -103,7 +103,7 @@ The two modules receive power from the GPIO and connect to ground.
 
 ### BreadBoard Prototype
 
-#### Testting the prototype
+#### Testing the prototype
 
 ![BreadBoard Diagram](assets/img/CircuitBoard/Pi-Hole_LED_Breadboard.png)
 
