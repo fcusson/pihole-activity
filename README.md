@@ -133,7 +133,58 @@ While the code run, make sure that all the LED turn on correctly and in the righ
 
 #### Running the scripts
 
-Now it is time to test code in action.
+##### percentCheck.py
+
+Now it is time to test code in action. The first code we will test is percentCheck.py. That code is responsible for lightinh up the LED Bar Graph in accordance to the percentage of ads blocked today and also activating the green LED if the status of the Pi-Hole is "enabled". You can run the test code with the following command.
+
+> Make sure you are still in the test folder of the repo
+
+```
+python3 percentCheck.py
+```
+
+You should get a similar result as this:
+```
+enabled
+58
+pin 1 on, pin no : 11
+pin 2 on, pin no : 12
+pin 3 on, pin no : 13
+pin 4 on, pin no : 15
+pin 5 on, pin no : 16
+pin 6 on, pin no : 18
+pin 8 off, pin no : 3
+pin 9 off, pin no : 5
+pin 10 off, pin no : 24
+Pi-Hole is enabled
+enabled
+58
+enabled
+58
+...
+```
+
+Make sure the result and the LED lights are consistent. Try disabling the Pi-Hole to see if the light goes off. When you are done testing, press `Ctrl+C` to deactivate the code. All LED should go off.
+
+##### adBlocked.py
+
+The second test code is adBlocked.py. This script is responsible for flashin the red LED every (ish) time an ad is blocked. Due t concern for epyleptics, the refresh rate is currently capted at 2 seconds (the script check if new ads have been blocked every 2 seonds). To test the code, run the following command:
+
+```
+python3 adBlocked.py
+```
+
+Force your pi-hole to block ads. My personnal test is [speedtest.net](https://www.speedtest.net/). You should get result like that:
+```
+ad Blocked
+ad Blocked
+ad Blocked
+ad Blocked
+ad Blocked
+...
+```
+
+When you are done testing this element, press `Ctrl+C` to stop the script.
 
 ### Permanent
 
@@ -164,6 +215,29 @@ For this module, a slight modification is required to the straight pin header. O
 Making the module is very similar to the LED Bar Graph. Make sure the module makes sense to you and that you are confortable soldering the parts. This one might be more difficult as it is more compact. A helping hand comes in very handy.
 
 ## Installation
+
+### Run script at startup
+
+We will be using the etc/profile to run the 2 scripts at boot. To do so, first open the profile file
+
+```
+sudo nano /etc/profile
+```
+
+then add the 2 following line of code at the end of the file
+
+```
+sudo python3 /home/pi/pihole-activity/src/percentCheck.py &
+sudo python3 /home/pi/pihole-activity/src/adBlocked.py &
+```
+
+When ready, reboot your pi-hole
+
+```
+sudo reboot
+```
+
+Let the Pi-Hole boot, it can take sometime, but the LED will eventually light up.
 
 ## Contribution
 
