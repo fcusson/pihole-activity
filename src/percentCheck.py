@@ -8,7 +8,7 @@
 ## 	- light an LED bar graph with a corresponding number of LED  ##
 ##	  to 'ads_percentage_today'                                  ##
 ##	- activate an LED if pihole API reports the status being     ##
-##	  equal to 'enabled'
+##	  equal to 'enabled'                                         ##
 #######################################################################
 
 #######################################################################
