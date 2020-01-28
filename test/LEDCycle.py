@@ -35,7 +35,7 @@ def setup():
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(ledPins, GPIO.OUT)
-	GPIO.output(ledPins, GPIO.HIGH)
+	GPIO.output(ledPins, GPIO.LOW)
 
 	# setup for the status LED
 	GPIO.setup(enPin, GPIO.OUT)
@@ -57,10 +57,10 @@ def cycle():
 		i += 1
 
 		# Open and then close every LED in the bar graph in order
-		GPIO.output(pin, GPIO.LOW)
+		GPIO.output(pin, GPIO.HIGH)
 		print("Bar Graph LED " + str(i) + " on")
 		time.sleep(onTime)
-		GPIO.output(pin, GPIO.HIGH)
+		GPIO.output(pin, GPIO.LOW)
 		time.sleep(waitTime)
 
 	# open and then close status LED
