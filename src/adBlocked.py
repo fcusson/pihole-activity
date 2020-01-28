@@ -4,6 +4,8 @@
 ## This Script is built for Raspberry Pi Zero W using wiringPi here: ##
 ## https://github.com/hardkernel/wiringPi                            ##
 ## Built for interaction with the pi-hole FTL api                    ##
+## This code is built to flash an LED when ads_blocked_today is      ##
+## different from last value.                                        ##
 #######################################################################
 
 #######################################################################
