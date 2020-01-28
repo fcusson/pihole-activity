@@ -1,5 +1,18 @@
 #! /usr/bin/env python
 
+#######################################################################
+## This Script is built for Raspberry Pi Zero W using wiringPi here: ##
+## https://github.com/hardkernel/wiringPi                            ##
+## Built for interaction with the pi-hole FTL api                    ##
+#######################################################################
+
+#######################################################################
+## Version: 	1.0.2                                                ##
+## Author:	Felix Cusson                                         ##
+## Date:	2020-01-28                                           ##
+## License:	GPL-3.0                                              ##
+#######################################################################
+
 # Import Module
 import requests
 import time
