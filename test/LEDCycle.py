@@ -1,5 +1,20 @@
 #! /usr/bin/env python
 
+#######################################################################
+## This Script is built for Raspberry Pi Zero W using wiringPi here: ##
+## https://github.com/hardkernel/wiringPi                            ##
+## This is a test code to validate the correct wirering in           ##
+## accordance to the project pihole-activity:                        ##
+## https://github.com/Darkfull-Dante/pihole-activity                 ##
+#######################################################################
+
+#######################################################################
+## Version: 	1.0.2                                                ##
+## Author:	Felix Cusson                                         ##
+## Date:	2020-01-28                                           ##
+## License:	GPL-3.0                                              ##
+#######################################################################
+
 # Import Module
 import requests
 import time
