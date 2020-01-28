@@ -95,8 +95,11 @@ This section will review the electronic components of the build. It will explain
 ![Electric Diagram](assets/img/CircuitBoard/Pi-Hole_LED_System.png)
 
 The circuit is made of two distinct elements. First there is the LED Bar graph and second, the activity light module.
-The first module takes the 3.3V rail of the Raspberry Pi and provide power to all 10 LED of the bar graph. Each LED of the bar graph are then connected to a GPIO. In this module, the light of the LED will be powered on when the output of the GPIO pin is set to LOW as the GPIO pin will act as a ground in that case. Inversely, the LED will be off if the GPIO output is set to HIGH.
-The second module works in the opposite way. The LED positive is connected to the GPIO. The negative is connected to ground. In this module, the LED is powered on when the output of the GPIO pin is set to HIGH.
+The two modules receive power from the GPIO and connect to ground.
+
+> If you were running V1.0.2 or earlier of the code, the LED Bar Graph was setup for LED on when GPIO was set to LOW. A rewiring of your setup will be required moving foward.
+
+> There are multiple advantages to the change in the setup. Mostly, a simpler way to eventually use PWM in the LED Bar Graph. Also, the new circuit does not use the 3.3V rail which releases the PIN for other use.
 
 ### BreadBoard Prototype
 
