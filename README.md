@@ -100,7 +100,7 @@ The second module works in the opposite way. The LED positive is connected to th
 
 ### BreadBoard Prototype
 
-#### Testting the prototype
+#### Testing the prototype
 
 ![BreadBoard Diagram](assets/img/CircuitBoard/Pi-Hole_LED_Breadboard.png)
 
