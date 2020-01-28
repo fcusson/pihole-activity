@@ -53,7 +53,7 @@ def cycle():
 	# cycle through every LED in the bar graph
 	for pin in ledPins :
 
-		# do somethin only if Index is not 0
+		# do something only if Index is not 0
 		i += 1
 
 		# Open and then close every LED in the bar graph in order
@@ -62,6 +62,15 @@ def cycle():
 		time.sleep(onTime)
 		GPIO.output(pin, GPIO.LOW)
 		time.sleep(waitTime)
+
+	# cycle though every LED in the bar Graph at increasing duty cycle
+	for pin in ledPins :
+
+		#do something only if Index is not 0
+		i += 1
+
+		#Open the LED at a duty cycle equivalent to 1*10 wait then close
+
 
 	# open and then close status LED
 	GPIO.output(enPin, GPIO.HIGH)
