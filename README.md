@@ -201,6 +201,8 @@ When you are done testing this element, press `Ctrl+C` to stop the script.
 
 The following are the permenant modules that we will install in the build. Be carefull at this point as the module are made to be permanent. Make sure the design fits for your particular case and that the wiring replicate the prototype we made.
 
+> If you know how to use a multimeter, I recommend you test the circuit, making sure there is no unwanted bridge in your module. It simplifies a lot trouble shooting afterward.
+
 #### LED Bar Graph Module
 
 | Front | Back |
@@ -249,6 +251,22 @@ sudo reboot
 ```
 
 Let the Pi-Hole boot, it can take sometime, but the LED will eventually light up.
+
+## Enclosing the project
+
+This part will guide you though the steps of enclosing your project inside a project box. If you are using a different Raspberry Pi thant the Zero W, the placement of the parts, the cable management and holes required may differ.
+
+The parts you have might be different than mine, always measure and carefully cut. You can always cut more in a small hole, it's a lot harder to add material to a bigger hole
+
+### Trace your project on paper
+
+### Place without glueing or screwing
+
+### Mark the places where holes are needed
+
+### Remove the material
+
+### Fix the components
 
 ## Contribution
 
