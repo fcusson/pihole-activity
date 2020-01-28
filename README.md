@@ -109,7 +109,10 @@ The two modules receive power from the GPIO and connect to ground.
 
 During the prototyping phase, make sure that everything is connected according to the exemple above and then connect to the Raspberry Pi.
 Make sure to use an appropriate resistor in the circuit. Make sure that every LED as its own resistor. An LED can draw to much current which could damage the Raspberry Pi GPIO.
-LEDs are a kind of diodes, which means that current can only go through a certain direction. For the circuit to work, you must make sure that the positive is connected on the side receiving current to work. The positive side of an LED is always the longer leg. In the case of the LED bar graph, there is no visual way to know the positive side other than testing. If at first the bar graph doesn’t light, simply rotate 180 degree and retest. (quick tip: mark the positive side of the LED bar graph for future reference).
+LEDs are a kind of diodes, which means that current can only go through a certain direction. For the circuit to work, you must make sure that the positive is connected on the side receiving current to work. The positive side of an LED is always the longer leg. In the case of the LED bar graph, there is no visual way to know the positive side other than testing. If at first the bar graph doesn’t light, simply rotate 180 degree and retest.
+
+> quick tip: mark the positive side of the LED bar graph for future reference.
+
 When everything is connected and the Raspberry Pi is turned on, run the LEDCheck.py python code. This code will cycle through the 12 LED of the modules. The LED should light up in the following order: LED 1 to 10 of the LED bar graph (in order), green LED, red LED.
 
 When everything is connected to your liking, move the test folder of the repository
