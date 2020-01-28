@@ -1,5 +1,23 @@
 #! /usr/bin/env python
 
+#######################################################################
+## This Script is built for Raspberry Pi Zero W using wiringPi here: ##
+## https://github.com/hardkernel/wiringPi                            ##
+## Built for interaction with the pi-hole FTL api                    ##
+## The script has 2 functionnality:                                  ##
+## 	- light an LED bar graph with a corresponding number of LED  ##
+##	  to 'ads_percentage_today'                                  ##
+##	- activate an LED if pihole API reports the status being     ##
+##	  equal to 'enabled'
+#######################################################################
+
+#######################################################################
+## Version: 	1.0.2                                                ##
+## Author:	Felix Cusson                                         ##
+## Date:	2020-01-28                                           ##
+## License:	GPL-3.0                                              ##
+#######################################################################
+
 # Import Module
 import requests
 import time
