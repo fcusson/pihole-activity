@@ -6,12 +6,23 @@ A Python project that manages an LED bar graph and two activity LED on a Raspber
 
 This project’s goal is to enclose a pi-hole server in a project box with added activity lights in the front panel. This project requires a raspberry pi with pi-hole already setup on it.
 
-## Cloning the repository to your Pi-Hole
+## Preparation
+
+### Cloning the repository to your Pi-Hole
 
 Access your pi-hole terminal via your prefered way. In the case of my setup, I access it through SSH
 
 ```
 git clone https://github.com/Darkfull-Dante/pihole-activity.git
+```
+### Installing WiringPi
+
+WiringPi is a utility for Raspberry Pi to control GPIO. This project is built around the use of this utility. For more details on the project see [wiringPi](http://wiringpi.com/). To install, use the following command in your Raspberry Pi:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install wiringpi
 ```
 
 ## Bill of material
