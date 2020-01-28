@@ -36,8 +36,8 @@ sudo apt-get install wiringpi
 | Green LED | See Red LED link | 1 | ($2.10) |
 | 220Ω resistor | [AliExpress](https://www.aliexpress.com/item/32847096736.html?spm=a2g0o.productlist.0.0.1e2d77f6E9aCcA&algo_pvid=6403fdcb-0516-4868-bc73-b871abaa2b44&algo_expid=6403fdcb-0516-4868-bc73-b871abaa2b44-0&btsid=119dfe71-7c7d-48ca-b24d-b4240f17a506&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 12 | $1.54 |
 | Single Row Right Angle Pin Header | [AliExpress](https://www.aliexpress.com/item/33038720470.html?spm=a2g0o.productlist.0.0.330f7ee9NRZCNC&algo_pvid=20574285-c96f-4147-948a-941f24c17ea7&algo_expid=20574285-c96f-4147-948a-941f24c17ea7-2&btsid=46693f45-04d0-454a-83de-405c4bd38438&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 11 | $1.91 |
-| Single Row Pin Header | [AliExpress](https://www.aliexpress.com/item/32864438850.html?spm=a2g0o.productlist.0.0.681450a7FeeBYB&algo_pvid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7&algo_expid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7-3&btsid=ea84bad1-90d4-40b7-b416-35f83d260430&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 3 | $1.15 |
-| Female to Female Jumper wires<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32970738923.html?spm=a2g0o.productlist.0.0.1a901f77473scE&algo_pvid=e09dda4f-6fd1-449f-b578-b6c221d9ad42&algo_expid=e09dda4f-6fd1-449f-b578-b6c221d9ad42-5&btsid=8983d517-3a9c-4c34-a5d8-cce2eef956f6&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 14 | $1.79 |
+| Single Row Pin Header | [AliExpress](https://www.aliexpress.com/item/32864438850.html?spm=a2g0o.productlist.0.0.681450a7FeeBYB&algo_pvid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7&algo_expid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7-3&btsid=ea84bad1-90d4-40b7-b416-35f83d260430&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 6 | $1.15 |
+| Female to Female Jumper wires<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32970738923.html?spm=a2g0o.productlist.0.0.1a901f77473scE&algo_pvid=e09dda4f-6fd1-449f-b578-b6c221d9ad42&algo_expid=e09dda4f-6fd1-449f-b578-b6c221d9ad42-5&btsid=8983d517-3a9c-4c34-a5d8-cce2eef956f6&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 15 | $1.79 |
 | PerfBoard | [AliExpress](https://www.aliexpress.com/item/4000070053237.html?spm=a2g0o.productlist.0.0.2eec3d788PBCPE&algo_pvid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63&algo_expid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63-0&btsid=57cc4798-1fe0-40f7-9108-75111384779f&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $4.34 |
 | 125x80x32 Project Box<sup>2</sup> | [AliExpress](https://www.aliexpress.com/item/4000370053139.html?spm=a2g0o.productlist.0.0.408e192bQLTqkU&algo_pvid=97080f62-6f11-4e65-81b8-9a35ded55a47&algo_expid=97080f62-6f11-4e65-81b8-9a35ded55a47-11&btsid=e4c17289-1d4c-4c17-89ac-bb3a64ffd2d2&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2.74 |
 |  |  | Total | $17.53 |
@@ -227,6 +227,14 @@ After that make sure to connect the resistor>LED and then LED>Pin Header in dist
 For this module, a slight modification is required to the straight pin header. On a flat surface, press the short pin side until it slip right up to the plastic part. This mod will let us mount the pin header under the perfBoard leting us connect fro the back instead of the front of the module.
 
 Making the module is very similar to the LED Bar Graph. Make sure the module makes sense to you and that you are confortable soldering the parts. This one might be more difficult as it is more compact. A helping hand comes in very handy.
+
+#### Ground Converter Module
+
+This is the simplest of the module. This one is completely optionnal and is only to reduce the footprint on the Raspberry Pi. Basically, we want a module that will simply take all our ground connection into one main ground that will connect to one ground GPIO.
+
+> If you do not want that soluttion you can simply use two ground pin on your Raspberry Pi
+
+For this build, the minimum is 3 pins, 2 inputs, 1 output. If you think of any possible expension in the future tu your build, I suggest you already add more ground pins. My build is setup with 5 inputs and 1 output.
 
 ## Installation
 
