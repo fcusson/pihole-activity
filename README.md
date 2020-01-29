@@ -115,9 +115,9 @@ LEDs are a kind of diodes, which means that current can only go through a certai
 
 When everything is connected and the Raspberry Pi is turned on, run the LEDCheck.py python code. This code will cycle through the 12 LED of the modules. The LED should light up in the following order: LED 1 to 10 of the LED bar graph (in order), green LED, red LED.
 
-When everything is connected to your liking, move the test folder of the repository
+When everything is connected to your liking, move to the test folder of the repository
 ```
-cd ~/home/pi/pihole-activity/src
+cd ~/home/pi/pihole-activity/test
 ```
 
 then run the python script called LEDCycle
@@ -145,14 +145,14 @@ While the code run, make sure that all the LED turn on correctly and in the righ
 
 #### Troubleshooting
 
-- **No lights from the LED bar graph:** First make sure that the 3.3V rail does connect with the resistors. The jumper wire from the 3.3v pin should be on the same line as the resistors. If it still doesn’t work the LED bar graph is probably mounted in reverse. Rotating 180 degree and rerun the code.
+- **No lights from the LED bar graph:** The LED bar graph is probably mounted in reverse. Rotate 180 degree and rerun the code.
 - **The Green or Red LED do not light up:** make sure that both lights connect to ground. Only one ground is used in the pins, but both lights should join on the negative side to eventually connect to the ground.
 
 #### Running the scripts
 
 ##### percentCheck.py
 
-Now it is time to test code in action. The first code we will test is percentCheck.py. That code is responsible for lightinh up the LED Bar Graph in accordance to the percentage of ads blocked today and also activating the green LED if the status of the Pi-Hole is "enabled". You can run the test code with the following command.
+Now it is time to test code in action. The first code we will test is percentCheck.py. That code is responsible for Turning on the LED Bar Graph in accordance to the percentage of ads blocked today and also activating the green LED if the status of the Pi-Hole is "enabled". You can run the test code with the following command.
 
 > Make sure you are still in the test folder of the repo
 
@@ -233,7 +233,11 @@ For this module, a slight modification is required to the straight pin header. O
 
 Making the module is very similar to the LED Bar Graph. Make sure the module makes sense to you and that you are confortable soldering the parts. This one might be more difficult as it is more compact. A helping hand comes in very handy.
 
-#### Ground Converter Module
+#### Ground Converger Module
+
+| Front | Back |
+| --- | ---- |
+| <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverger-front.png" alt="Ground Converger Module Front" height="100"> | <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverger-back.png" alt="Ground Converger Module Back" height="100"> |
 
 This is the simplest of the module. This one is completely optionnal and is only to reduce the footprint on the Raspberry Pi. Basically, we want a module that will simply take all our ground connection into one main ground that will connect to one ground GPIO.
 
@@ -273,6 +277,8 @@ This part will guide you though the steps of enclosing your project inside a pro
 The parts you have might be different than mine, always measure and carefully cut. You can always cut more in a small hole, it's a lot harder to add material to a bigger hole
 
 ### Trace your project on paper
+
+Take time to measure everything as much as you can. A suggestion, make sure you have evrything appart from the project box first so you can have precise measurements. Make sure the design and cable management make sense.
 
 ### Place without glueing or screwing
 
