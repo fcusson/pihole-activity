@@ -15,14 +15,32 @@ Access your pi-hole terminal via your prefered way. In the case of my setup, I a
 ```
 git clone https://github.com/Darkfull-Dante/pihole-activity.git
 ```
-### Installing WiringPi
 
-WiringPi is a utility for Raspberry Pi to control GPIO. This project is built around the use of this utility. For more details on the project see [wiringPi](http://wiringpi.com/). To install, use the following command in your Raspberry Pi:
+### Installation script
+
+You can use the install.sh script to check for dependencies and load the project at boot. You can do so by running the following commands:
+
+```
+sudo chmod +x install.sh
+sudo sh install.sh
+```
+
+### Installing Dependencies
+
+> this step is not required if you ran the install.sh script
+
+We have 2 major dependencies in this project. WiringPi and Python3
+
+WiringPi is a utility for Raspberry Pi to control GPIO. This project is built around the use of this utility. For more details on the project see [wiringPi](http://wiringpi.com/).
+
+You probably have python already on your Raspberry Pi, but python3 is required for certain functionnality.
+
+To install, use the following commands in your Raspberry Pi:
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install wiringpi
+sudo apt-get install wiringPi python3-dev libffi-dev libssl-dev
 ```
 
 ## Bill of material
@@ -228,6 +246,8 @@ Making the module is very similar to the LED Bar Graph. Make sure the module mak
 ## Installation
 
 ### Run script at startup
+
+> this step is not required if you ran the install.sh script
 
 We will be using the etc/profile to run the 2 scripts at boot. To do so, first open the profile file
 
