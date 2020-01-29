@@ -238,7 +238,7 @@ Making the module is very similar to the LED Bar Graph. Make sure the module mak
 
 | Front | Back |
 | --- | ---- |
-| <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverger-front.png" alt="Ground Converger Module Front" height="100"> | <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverger-back.png" alt="Ground Converger Module Back" height="100"> |
+| <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverger-Front.png" alt="Ground Converger Module Front" height="100"> | <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverger-Back.png" alt="Ground Converger Module Back" height="100"> |
 
 This is the simplest of the module. This one is completely optionnal and is only to reduce the footprint on the Raspberry Pi. Basically, we want a module that will simply take all our ground connection into one main ground that will connect to one ground GPIO.
 
