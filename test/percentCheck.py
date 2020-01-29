@@ -30,7 +30,7 @@ def setup():
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(ledPins, GPIO.OUT)
-	GPIO.output(ledPins, GPIO.HIGH)
+	GPIO.output(ledPins, GPIO.LOW)
 
 	GPIO.setup(enPin, GPIO.OUT)
 	GPIO.output(enPin, GPIO.LOW)
@@ -67,11 +67,11 @@ def loop():
 
 				# Open Led only if pin index is lower or equal to percentNew
 				if i <= numberOfLed :
-					GPIO.output(pin, GPIO.LOW)
+					GPIO.output(pin, GPIO.HIGH)
 					print("pin " + str(i) + " on, pin no : " + str(pin))
 				
 				if i > (numberOfLed + 1) :
-					GPIO.output(pin, GPIO.HIGH)
+					GPIO.output(pin, GPIO.LOW)
 					print("pin " + str(i) + " off, pin no : " + str(pin))
 
 		if statusNew != statusOld :
