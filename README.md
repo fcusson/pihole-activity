@@ -39,8 +39,9 @@ sudo apt-get install wiringpi
 | Single Row Pin Header | [AliExpress](https://www.aliexpress.com/item/32864438850.html?spm=a2g0o.productlist.0.0.681450a7FeeBYB&algo_pvid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7&algo_expid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7-3&btsid=ea84bad1-90d4-40b7-b416-35f83d260430&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 6 | $1.15 |
 | Female to Female Jumper wires<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32970738923.html?spm=a2g0o.productlist.0.0.1a901f77473scE&algo_pvid=e09dda4f-6fd1-449f-b578-b6c221d9ad42&algo_expid=e09dda4f-6fd1-449f-b578-b6c221d9ad42-5&btsid=8983d517-3a9c-4c34-a5d8-cce2eef956f6&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 15 | $1.79 |
 | PerfBoard | [AliExpress](https://www.aliexpress.com/item/4000070053237.html?spm=a2g0o.productlist.0.0.2eec3d788PBCPE&algo_pvid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63&algo_expid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63-0&btsid=57cc4798-1fe0-40f7-9108-75111384779f&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $4.34 |
+| Nylon 4mm M3 spacer | [AliExpress](https://www.aliexpress.com/item/33031794972.html?spm=a2g0o.productlist.0.0.739c41826C2hgY&algo_pvid=4b6e1ee1-2f2c-49f4-9651-4bccf7e3d93d&algo_expid=4b6e1ee1-2f2c-49f4-9651-4bccf7e3d93d-2&btsid=2d11f107-9498-429e-9b07-46bcceeb9a30&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 6 | $3.75 |
 | 125x80x32 Project Box<sup>2</sup> | [AliExpress](https://www.aliexpress.com/item/4000370053139.html?spm=a2g0o.productlist.0.0.408e192bQLTqkU&algo_pvid=97080f62-6f11-4e65-81b8-9a35ded55a47&algo_expid=97080f62-6f11-4e65-81b8-9a35ded55a47-11&btsid=e4c17289-1d4c-4c17-89ac-bb3a64ffd2d2&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2.74 |
-|  |  | Total | $17.53 |
+|  |  | Total | $21.28 |
 
 <sup>1</sup>Ideally look for jumper cable in ribbon style so you can keep bundles together for each circuit.
 <sup>2</sup>The size provided is based on a Raspberry Pi Zero W with an ethernet to micro USB adapter. I suggest you draw everything to size and make sure everything fits before commiting to a project box size.
@@ -276,17 +277,19 @@ This part will guide you though the steps of enclosing your project inside a pro
 
 The parts you have might be different than mine, always measure and carefully cut. You can always cut more in a small hole, it's a lot harder to add material to a bigger hole
 
-### Trace your project on paper
+### 1. Trace the project on paper
+
+![HandDrawn Tracing](assets/img/Enclosed/HandDrawn.png)
 
 Take time to measure everything as much as you can. A suggestion, make sure you have evrything appart from the project box first so you can have precise measurements. Make sure the design and cable management make sense.
 
-### Place without glueing or screwing
+### 2. Place without glueing or screwing
 
-### Mark the places where holes are needed
+### 3. Mark the places where holes are needed
 
-### Remove the material
+### 4. Remove the material
 
-### Fix the components
+### 5. Fix the components
 
 ## Contribution
 
