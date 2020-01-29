@@ -124,18 +124,32 @@ python3 LEDCycle.py
 
 you should get the following result without errors
 ```
-Bar Graph LED 1 on
-Bar Graph LED 2 on
-Bar Graph LED 3 on
-Bar Graph LED 4 on
-Bar Graph LED 5 on
-Bar Graph LED 6 on
-Bar Graph LED 7 on
-Bar Graph LED 8 on
-Bar Graph LED 9 on
-Bar Graph LED 10 on
-Status LED on
-ad Blocked LED on
+Bar Graph LED HIGH Cycle :
+- Bar Graph LED 1 on
+- Bar Graph LED 2 on
+- Bar Graph LED 3 on
+- Bar Graph LED 4 on
+- Bar Graph LED 5 on
+- Bar Graph LED 6 on
+- Bar Graph LED 7 on
+- Bar Graph LED 8 on
+- Bar Graph LED 9 on
+- Bar Graph LED 10 on
+Activity LED Cycle :
+- Status LED on
+- Ad Blocked LED on
+Bar Graph LED PWM Cycle:
+- Bar Graph LED 1 at 10%
+- Bar Graph LED 2 at 20%
+- Bar Graph LED 3 at 30%
+- Bar Graph LED 4 at 40%
+- Bar Graph LED 5 at 50%
+- Bar Graph LED 6 at 60%
+- Bar Graph LED 7 at 70%
+- Bar Graph LED 8 at 80%
+- Bar Graph LED 9 at 90%
+- Bar Graph LED 10 at 100%
+LED Cycle test completed
 ```
 
 While the code run, make sure that all the LED turn on correctly and in the right order. Make the necessary changes if need be.

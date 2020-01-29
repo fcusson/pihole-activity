@@ -51,6 +51,8 @@ def cycle():
 	i = 0
 
 	# cycle through every LED in the bar graph
+	print("Bar Graph LED HIGH Cycle :")
+
 	for pin in ledPins :
 
 		# do something only if Index is not 0
@@ -58,33 +60,36 @@ def cycle():
 
 		# Open and then close every LED in the bar graph in order
 		GPIO.output(pin, GPIO.HIGH)
-		print("Bar Graph LED " + str(i) + " on")
+		print("- Bar Graph LED " + str(i) + " on")
 		time.sleep(onTime)
 		GPIO.output(pin, GPIO.LOW)
 		time.sleep(waitTime)
 
-	# cycle though every LED in the bar Graph at increasing duty cycle
-	for pin in ledPins :
-
-		#do something only if Index is not 0
-		i += 1
-
-		#Open the LED at a duty cycle equivalent to 1*10 wait then close
-
-
 	# open and then close status LED
+	print("Activity LED Cycle :")
+
 	GPIO.output(enPin, GPIO.HIGH)
-	print("Status LED on")
+	print("- Status LED on")
 	time.sleep(onTime)
 	GPIO.output(enPin, GPIO.LOW)
 	time.sleep(waitTime)
 
 	# open and then close the ad LED
 	GPIO.output(adPin, GPIO.HIGH)
-	print("ad Blocked LED on")
+	print("- ad Blocked LED on")
 	time.sleep(onTime)
 	GPIO.output(adPin, GPIO.LOW)
 	time.sleep(waitTime)
+
+	# cycle though every LED in the bar Graph at increasing duty cycle
+	print("Bar Graph LED PWM Cycle:")
+
+	for pin in ledPins :
+
+		#do something only if Index is not 0
+		i += 1
+
+		#Open the LED at a duty cycle equivalent to 1*10 wait then close
 
 # define GPIO CleanUp
 def destroy():
