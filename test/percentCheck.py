@@ -8,7 +8,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.0.2                                                ##
+## Version: 	1.2.1                                                ##
 ## Author:	Felix Cusson                                         ##
 ## Date:	2020-01-28                                           ##
 ## License:	GPL-3.0                                              ##
@@ -44,13 +44,15 @@ def loop():
 	while True:
 		# Get percent Blocked
 		pihole = requests.get("http://127.0.0.1/admin/api.php?summaryRaw").json()
-		percentNew = int(round(pihole['ads_percentage_today']))
+		percentNew = int(math.floor(pihole['ads_percentage_today']))
 		statusNew = str(pihole['status'])
-		print(statusNew)
+		
+		#determine the LED values
+		numberOfLed = int(math.floor(percentNew/10))
+		dc = int((percentNew%10)*10)
 
-
-		print(percentNew)
-		numberOfLed = int(round(percentNew/10))
+		# print data for test values
+		print("statusNew = " + statusNew + ", percentNew = "+ str(percentNew) = ", numberOfLed = " + str(numberOfLed) + ", dc = " + str(dc))
 
 		# Check if percentNew is different from percentOld
 		if percentNew != percentOld :
