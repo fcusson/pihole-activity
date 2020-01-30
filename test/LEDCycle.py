@@ -31,6 +31,7 @@ adPin = 37
 # define setup
 def setup():
 	
+	global pwm
 	# setup for the LED Bar Graph
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
@@ -44,6 +45,10 @@ def setup():
 	# setup for the ad blocked LED
 	GPIO.setup(adPin, GPIO.OUT)
 	GPIO.output(adPin, GPIO.LOW)
+
+	# setup for PWM
+	pwm = GPIO.PWM(ledPins[0], 500)
+	pwm.start(0)
 
 # define the LED Cycle code
 def cycle():
@@ -90,10 +95,15 @@ def cycle():
 		i += 1
 
 		#Open the LED at a duty cycle equivalent to 1*10 wait then close
+		pwm.stop()
+		pwm = GPIO.PWM(pin, 500)
+		print("Pin "+str(i)+" PWM at "+str(i*10)+"%")
 
 # define GPIO CleanUp
 def destroy():
+	
 	GPIO.cleanup()
+	pwm.stop()
 
 if __name__ == '__main__':
 
