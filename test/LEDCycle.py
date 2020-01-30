@@ -9,7 +9,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.0.2                                                ##
+## Version: 	1.2.1                                                ##
 ## Author:	Felix Cusson                                         ##
 ## Date:	2020-01-28                                           ##
 ## License:	GPL-3.0                                              ##
@@ -30,7 +30,7 @@ adPin = 37
 
 # define setup
 def setup():
-	
+
 	global pwm
 	# setup for the LED Bar Graph
 	GPIO.setwarnings(False)
@@ -54,6 +54,8 @@ def setup():
 def cycle():
 
 	i = 0
+	j = 0
+	global pwm
 
 	# cycle through every LED in the bar graph
 	print("Bar Graph LED HIGH Cycle :")
@@ -92,12 +94,14 @@ def cycle():
 	for pin in ledPins :
 
 		#do something only if Index is not 0
-		i += 1
+		j += 1
 
 		#Open the LED at a duty cycle equivalent to 1*10 wait then close
 		pwm.stop()
 		pwm = GPIO.PWM(pin, 500)
-		print("Pin "+str(i)+" PWM at "+str(i*10)+"%")
+		pwm.start(int(j)*10)
+		print("Pin "+str(j)+" PWM at "+str(int(j)*10)+"%")
+		time.sleep(onTime)
 
 # define GPIO CleanUp
 def destroy():
@@ -112,6 +116,7 @@ if __name__ == '__main__':
 	try:
 		#Call Loop
 		cycle()
+		destroy()
 
 	except KeyboardInterrupt:
 		destroy()
