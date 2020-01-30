@@ -40,6 +40,8 @@ def loop():
 
 	percentOld=0
 	statusOld="disabled"
+	pwm = GPIO(ledPins[1], 500)
+	pwm.start(0)
 
 	while True:
 		# Get percent Blocked
@@ -52,7 +54,7 @@ def loop():
 		dc = int((percentNew%10)*10)
 
 		# print data for test values
-		print("statusNew = " + statusNew + ", percentNew = "+ str(percentNew) = ", numberOfLed = " + str(numberOfLed) + ", dc = " + str(dc))
+		print("statusNew = " + statusNew + ", percentNew = "+ str(percentNew) + ", numberOfLed = " + str(numberOfLed) + ", dc = " + str(dc))
 
 		# Check if percentNew is different from percentOld
 		if percentNew != percentOld :
@@ -67,11 +69,18 @@ def loop():
 				# do something only if Index is not 0
 				i += 1
 
+				pwm.stop()
+
 				# Open Led only if pin index is lower or equal to percentNew
 				if i <= numberOfLed :
 					GPIO.output(pin, GPIO.HIGH)
 					print("pin " + str(i) + " on, pin no : " + str(pin))
 				
+				if i = (numberOfLed + 1) :
+					pwm = GPIO.PWM(pin, 500)
+					pwm.start(dc)
+					print("pin " + str(i) + "PWM at " + str(dc) + "%, pin no : "+ str(pin))
+
 				if i > (numberOfLed + 1) :
 					GPIO.output(pin, GPIO.LOW)
 					print("pin " + str(i) + " off, pin no : " + str(pin))
