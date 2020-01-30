@@ -76,7 +76,7 @@ def loop():
 					GPIO.output(pin, GPIO.HIGH)
 					print("pin " + str(i) + " on, pin no : " + str(pin))
 				
-				if i = (numberOfLed + 1) :
+				if i == (numberOfLed + 1) :
 					pwm = GPIO.PWM(pin, 500)
 					pwm.start(dc)
 					print("pin " + str(i) + "PWM at " + str(dc) + "%, pin no : "+ str(pin))
