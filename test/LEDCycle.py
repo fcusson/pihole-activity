@@ -30,8 +30,8 @@ configur.read('config.ini')
 reverseLEDBarGraph = configur.getboolean('LEDBarGraph', 'reverseLEDBarGraph')
 
 # define variables
-waitTime = 1
-onTime = 2
+waitTime = 0.1
+onTime = 0.4
 ledPins = [11, 12, 13, 15, 16, 18, 22, 3, 5, 24]
 enPin = 35
 adPin = 37
