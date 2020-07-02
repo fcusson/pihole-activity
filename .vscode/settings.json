@@ -1,3 +1,8 @@
 {
-    "remote.onstartup": true
+    "remote.onstartup": true,
+    "cSpell.words": [
+        "configur",
+        "gpio",
+        "pihole"
+    ]
 }
