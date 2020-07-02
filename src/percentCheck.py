@@ -12,9 +12,9 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.1.1                                                ##
+## Version: 	1.2.1                                                ##
 ## Author:      Felix Cusson                                         ##
-## Date:        2020-01-28                                           ##
+## Date:        2020-07-02                                           ##
 ## License:     GPL-3.0                                              ##
 #######################################################################
 
@@ -23,11 +23,23 @@ import requests
 import time
 import RPi.GPIO as GPIO
 import math
+from configparser import ConfigParser
+
+# establish ConfigParser as a variable
+configur = ConfigParser()
+configur.read('config.ini')
+
+# config variables
+reverseLEDBarGraph = configur.get('LEDBarGraph', 'reverseLEDBarGraph')
 
 # define variables
 waitTime = 5
 ledPins = [11, 12, 13, 15, 16, 18, 22, 3, 5, 24]
 enPin = 35
+
+# reverse ledPins if required by config.ini
+if reverseLEDBarGraph == True :
+	ledPins = ledPins.reverse()
 
 # define setup
 def setup():
@@ -78,7 +90,7 @@ def loop():
 			#refresh statusOld
 			statusOld = statusNew
 
-			#change led status depnding on status of Pi-Hole
+			#change led status depending on status of Pi-Hole
 			if statusNew == "enabled" :
 				GPIO.output(enPin, GPIO.HIGH)
 			else :

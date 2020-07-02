@@ -280,6 +280,13 @@ sudo reboot
 
 Let the Pi-Hole boot, it can take sometime, but the LED will eventually light up.
 
+### Config.ini
+
+This section will go through the different settings possible in the config.ini file. (I know there is just one right now, I wrote the paragraph for future settings to come)
+
+#### reverseLEDBarGraph
+Lets you reverse the order of the pins for the LED bar graph. If you were to mount the bar graph in reverse by accident of solder backward the connection to your raspberry pi, this setting lets you reverse the order (pin one becomes 10, 2 becomes 9, etc.). Saves you some resoldering. (I'm obviously not talking by experience)
+
 ## Enclosing the project
 
 This part will guide you though the steps of enclosing your project inside a project box. If you are using a different Raspberry Pi thant the Zero W, the placement of the parts, the cable management and holes required may differ.
