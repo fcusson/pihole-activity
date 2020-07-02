@@ -118,7 +118,7 @@ When everything is connected and the Raspberry Pi is turned on, run the LEDCheck
 
 When everything is connected to your liking, move to the test folder of the repository
 ```
-cd ~/home/pi/pihole-activity/test
+cd ~/pihole-activity/test
 ```
 
 then run the python script called LEDCycle
