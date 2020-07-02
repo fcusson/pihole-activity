@@ -15,14 +15,23 @@ Access your pi-hole terminal via your prefered way. In the case of my setup, I a
 ```
 git clone https://github.com/Darkfull-Dante/pihole-activity.git
 ```
-### Installing WiringPi
+### Installing Dependencies
 
-WiringPi is a utility for Raspberry Pi to control GPIO. This project is built around the use of this utility. For more details on the project see [wiringPi](http://wiringpi.com/). To install, use the following command in your Raspberry Pi:
+The following dependencies are required to run the program. Make sure all dependencies are installed with the lines of code bellow before continuing on. 
+
+#### Wiring Pi
+WiringPi is a utility for Raspberry Pi to control GPIO. This project is built around the use of this utility. For more details on the project see [wiringPi](http://wiringpi.com/).
+
+#### Python 3
+Python 3 is the most up to date version of Python (at the time of writing the code) and is the version used for the code. Everything could work with Python 2 but this tutorial will not delve into the change required to make it work.
+
+#### Python 3 RPi.GPIO
+Python 3 does not include RPi.GPIO out of the box. It is included in the python3-dev package, but, in order to keep this install lightweight, the dev version was not installed. Required for the correct access of GPIO pins with the python code.
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install wiringpi
+sudo apt-get install wiringpi python3 python3-rpi.gpio
 ```
 
 ## Bill of material
