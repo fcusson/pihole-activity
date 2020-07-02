@@ -12,7 +12,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.2.2                                                ##
+## Version: 	1.2.3                                                ##
 ## Author:      Felix Cusson                                         ##
 ## Date:        2020-07-02                                           ##
 ## License:     GPL-3.0                                              ##
@@ -37,9 +37,10 @@ waitTime = 5
 ledPins = [11, 12, 13, 15, 16, 18, 22, 3, 5, 24]
 enPin = 35
 
-# reverse ledPins if required by config.ini
-if reverseLEDBarGraph == True :
-	ledPins = ledPins.reverse()
+# define the reversing function
+def Reverse(lst):
+	lst.reverse()
+	return lst
 
 # define setup
 def setup():
@@ -50,6 +51,10 @@ def setup():
 
 	GPIO.setup(enPin, GPIO.OUT)
 	GPIO.output(enPin, GPIO.LOW)
+
+	# reverse LEDPins if reverseLEDBarGraph is true
+	if reverseLEDBarGraph == True :
+		Reverse(ledPins)
 
 # define Infinite Loop
 def loop():
