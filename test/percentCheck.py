@@ -8,7 +8,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.2.1                                                ##
+## Version: 	1.2.2                                                ##
 ## Author:      Felix Cusson                                         ##
 ## Date:        2020-07-02                                           ##
 # ## License:   GPL-3.0                                              ##
@@ -26,7 +26,7 @@ configur = ConfigParser()
 configur.read('config.ini')
 
 # config variables
-reverseLEDBarGraph = configur.get('LEDBarGraph', 'reverseLEDBarGraph')
+reverseLEDBarGraph = configur.getboolean('LEDBarGraph', 'reverseLEDBarGraph')
 
 # define variables
 waitTime = 5

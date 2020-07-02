@@ -4,7 +4,7 @@
 ## This Script is built for Raspberry Pi Zero W using wiringPi here: ##
 ## https://github.com/hardkernel/wiringPi                            ##
 ## Built for interaction with the pi-hole FTL api                    ##
-## The script has 2 functionnality:                                  ##
+## The script has 2 functionality:                                   ##
 ##      - light an LED bar graph with a corresponding number of LED  ##
 ##        to 'ads_percentage_today'                                  ##
 ##      - activate an LED if pihole API reports the status being     ##
@@ -12,7 +12,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.2.1                                                ##
+## Version: 	1.2.2                                                ##
 ## Author:      Felix Cusson                                         ##
 ## Date:        2020-07-02                                           ##
 ## License:     GPL-3.0                                              ##
@@ -30,7 +30,7 @@ configur = ConfigParser()
 configur.read('config.ini')
 
 # config variables
-reverseLEDBarGraph = configur.get('LEDBarGraph', 'reverseLEDBarGraph')
+reverseLEDBarGraph = configur.getboolean('LEDBarGraph', 'reverseLEDBarGraph')
 
 # define variables
 waitTime = 5
