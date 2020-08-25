@@ -268,8 +268,8 @@ sudo nano /etc/profile
 then add the 2 following line of code at the end of the file
 
 ```
-sudo python3 /home/pi/pihole-activity/src/percentCheck.py &
-sudo python3 /home/pi/pihole-activity/src/adBlocked.py &
+sudo python /home/pi/pihole-activity/src/percentCheck.py &
+sudo python /home/pi/pihole-activity/src/adBlocked.py &
 ```
 
 When ready, reboot your pi-hole

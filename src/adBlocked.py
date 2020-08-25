@@ -9,7 +9,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.1.1                                                ##
+## Version: 	1.1.2                                                ##
 ## Author:      Felix Cusson                                         ##
 ## Date:        2020-01-28                                           ##
 ## License:     GPL-3.0                                              ##
@@ -38,7 +38,7 @@ def loop():
 	blockedOld = 0
 
 	while True:
-		# Get blockedQuerry
+		# Get blockedQuery
 		pihole = requests.get("http://127.0.0.1/admin/api.php?summaryRaw").json()
 		blockedNew = int(pihole['ads_blocked_today'])
 

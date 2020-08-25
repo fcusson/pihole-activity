@@ -8,7 +8,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.1.1                                                ##
+## Version: 	1.1.2                                                ##
 ## Author:      Felix Cusson                                         ##
 ## Date:        2020-01-28                                           ##
 ## License:     GPL-3.0                                              ##
@@ -57,7 +57,7 @@ def loop():
 			# print that an ad was blocked
 			print("ad Blocked")
 
-		# wati before new refresh
+		# wait before new refresh
 		time.sleep(waitTime)
 
 # define GPIO CleanUp

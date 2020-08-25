@@ -8,7 +8,7 @@
 #######################################################################
 
 #######################################################################
-## Version: 	1.2.3                                                ##
+## Version: 	1.2.4                                                ##
 ## Author:      Felix Cusson                                         ##
 ## Date:        2020-07-02                                           ##
 # ## License:   GPL-3.0                                              ##
@@ -27,11 +27,30 @@ configur.read('config.ini')
 
 # config variables
 reverseLEDBarGraph = configur.getboolean('LEDBarGraph', 'reverseLEDBarGraph')
+onStateBG = configur.getboolean('LEDBarGraph', 'highModeBarGraph')
+onStateSL = configur.getboolean('StatusLED', 'highModeStatus')
 
 # define variables
 waitTime = 5
 ledPins = [11, 12, 13, 15, 16, 18, 22, 3, 5, 24]
 enPin = 35
+
+# determine the on and off value for Bar Graph
+if onStateBG == True :
+	onValueBG = GPIO.HIGH
+	offValueBG = GPIO.LOW
+
+elif onStateBG == False :
+	onValueBG = GPIO.LOW
+	offValueBG = GPIO.HIGH
+
+# determine the on and off state for the Status LED
+if onStateSL == True :
+	onValueSL = GPIO.HIGH
+	offValueSL = GPIO.LOW
+elif onStateSL == False :
+	onValueSL = GPIO.LOW
+	offValueSL = GPIO.HIGH
 
 # define the reversing function
 def Reverse(lst):
@@ -43,10 +62,10 @@ def setup():
 	GPIO.setwarnings(False)
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(ledPins, GPIO.OUT)
-	GPIO.output(ledPins, GPIO.LOW)
+	GPIO.output(ledPins, offValueBG)
 
 	GPIO.setup(enPin, GPIO.OUT)
-	GPIO.output(enPin, GPIO.LOW)
+	GPIO.output(enPin, offValueSL)
 
 	# reverse LEDPins if reverseLEDBarGraph is true
 	if reverseLEDBarGraph == True :
@@ -84,11 +103,11 @@ def loop():
 
 				# Open Led only if pin index is lower or equal to percentNew
 				if i <= numberOfLed :
-					GPIO.output(pin, GPIO.HIGH)
+					GPIO.output(pin, onValueBG)
 					print("pin " + str(i) + " on, pin no : " + str(pin))
 				
-				if i > (numberOfLed + 1) :
-					GPIO.output(pin, GPIO.LOW)
+				elif i > (numberOfLed + 1) :
+					GPIO.output(pin, offValueBG)
 					print("pin " + str(i) + " off, pin no : " + str(pin))
 
 		if statusNew != statusOld :
@@ -96,12 +115,12 @@ def loop():
 			#refresh statusOld
 			statusOld = statusNew
 
-			#change led status depnding on status of Pi-Hole
+			#change led status depending on status of Pi-Hole
 			if statusNew == "enabled" :
-				GPIO.output(enPin, GPIO.HIGH)
+				GPIO.output(enPin, onValueSL)
 				print("Pi-Hole is enabled")
 			else :
-				GPIO.output(enPin, GPIO.LOW)
+				GPIO.output(enPin, offValueSL)
 				print("Pi-Hole is disabled")
 
 		# Wait before refresh
