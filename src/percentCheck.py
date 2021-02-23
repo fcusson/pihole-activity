@@ -27,7 +27,7 @@ from configparser import ConfigParser
 
 # establish ConfigParser as a variable
 configur = ConfigParser()
-configur.read('config.ini')
+configur.read('/home/pi/pihole-activity/src/config.ini')
 
 # config variables
 reverseLEDBarGraph = configur.getboolean('LEDBarGraph', 'reverseLEDBarGraph')
