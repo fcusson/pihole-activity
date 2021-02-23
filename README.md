@@ -15,17 +15,21 @@ Access your pi-hole terminal via your prefered way. In the case of my setup, I a
 ```
 git clone https://github.com/Darkfull-Dante/pihole-activity.git
 ```
+
 ### Installing Dependencies
 
-The following dependencies are required to run the program. Make sure all dependencies are installed with the lines of code bellow before continuing on. 
+The following dependencies are required to run the program. Make sure all dependencies are installed with the lines of code bellow before continuing on.
 
 #### Wiring Pi
+
 WiringPi is a utility for Raspberry Pi to control GPIO. This project is built around the use of this utility. For more details on the project see [wiringPi](http://wiringpi.com/).
 
 #### Python 3
+
 Python 3 is the most up to date version of Python (at the time of writing the code) and is the version used for the code. Everything could work with Python 2 but this tutorial will not delve into the change required to make it work.
 
 #### Python 3 RPi.GPIO
+
 Python 3 does not include RPi.GPIO out of the box. It is included in the python3-dev package, but, in order to keep this install lightweight, the dev version was not installed. Required for the correct access of GPIO pins with the python code.
 
 ```
@@ -38,19 +42,19 @@ sudo apt-get install wiringpi python3 python3-rpi.gpio
 
 ### For the final build
 
-| Description | Link | Quantity | Price |
-| ----------- | ---- | -------- | -----: |
-| 10 segments red LED Bar Graph | [AliExpress](https://www.aliexpress.com/item/32811943871.html?spm=a2g0o.productlist.0.0.385757df1b2Lr8&algo_pvid=81b6ea2e-bbe1-4634-9305-ca7d9543ac35&algo_expid=81b6ea2e-bbe1-4634-9305-ca7d9543ac35-16&btsid=0844ca98-45f0-41d7-bb55-1833f7978391&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $1.96 |
-| Red LED | [AliExpress](https://www.aliexpress.com/item/32848810276.html?spm=a2g0o.productlist.0.0.171f3220F091HR&algo_pvid=c14c42e9-d51a-4a9e-89f0-08dd5290a215&algo_expid=c14c42e9-d51a-4a9e-89f0-08dd5290a215-0&btsid=ec5c1224-9eb1-462d-99e7-e5065f9670da&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2.10 |
-| Green LED | See Red LED link | 1 | ($2.10) |
-| 220Ω resistor | [AliExpress](https://www.aliexpress.com/item/32847096736.html?spm=a2g0o.productlist.0.0.1e2d77f6E9aCcA&algo_pvid=6403fdcb-0516-4868-bc73-b871abaa2b44&algo_expid=6403fdcb-0516-4868-bc73-b871abaa2b44-0&btsid=119dfe71-7c7d-48ca-b24d-b4240f17a506&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 12 | $1.54 |
-| Single Row Right Angle Pin Header | [AliExpress](https://www.aliexpress.com/item/33038720470.html?spm=a2g0o.productlist.0.0.330f7ee9NRZCNC&algo_pvid=20574285-c96f-4147-948a-941f24c17ea7&algo_expid=20574285-c96f-4147-948a-941f24c17ea7-2&btsid=46693f45-04d0-454a-83de-405c4bd38438&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 11 | $1.91 |
-| Single Row Pin Header | [AliExpress](https://www.aliexpress.com/item/32864438850.html?spm=a2g0o.productlist.0.0.681450a7FeeBYB&algo_pvid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7&algo_expid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7-3&btsid=ea84bad1-90d4-40b7-b416-35f83d260430&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 6 | $1.15 |
-| Female to Female Jumper wires<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32970738923.html?spm=a2g0o.productlist.0.0.1a901f77473scE&algo_pvid=e09dda4f-6fd1-449f-b578-b6c221d9ad42&algo_expid=e09dda4f-6fd1-449f-b578-b6c221d9ad42-5&btsid=8983d517-3a9c-4c34-a5d8-cce2eef956f6&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 15 | $1.79 |
-| PerfBoard | [AliExpress](https://www.aliexpress.com/item/4000070053237.html?spm=a2g0o.productlist.0.0.2eec3d788PBCPE&algo_pvid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63&algo_expid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63-0&btsid=57cc4798-1fe0-40f7-9108-75111384779f&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $4.34 |
-| Nylon 4mm M3 spacer | [AliExpress](https://www.aliexpress.com/item/33031794972.html?spm=a2g0o.productlist.0.0.739c41826C2hgY&algo_pvid=4b6e1ee1-2f2c-49f4-9651-4bccf7e3d93d&algo_expid=4b6e1ee1-2f2c-49f4-9651-4bccf7e3d93d-2&btsid=2d11f107-9498-429e-9b07-46bcceeb9a30&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 6 | $3.75 |
-| 125x80x32 Project Box<sup>2</sup> | [AliExpress](https://www.aliexpress.com/item/4000370053139.html?spm=a2g0o.productlist.0.0.408e192bQLTqkU&algo_pvid=97080f62-6f11-4e65-81b8-9a35ded55a47&algo_expid=97080f62-6f11-4e65-81b8-9a35ded55a47-11&btsid=e4c17289-1d4c-4c17-89ac-bb3a64ffd2d2&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $2.74 |
-|  |  | Total | $21.28 |
+| Description                               | Link                                                                                                                                                                                                                                                                                                                | Quantity |   Price |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------: |
+| 10 segments red LED Bar Graph             | [AliExpress](https://www.aliexpress.com/item/32811943871.html?spm=a2g0o.productlist.0.0.385757df1b2Lr8&algo_pvid=81b6ea2e-bbe1-4634-9305-ca7d9543ac35&algo_expid=81b6ea2e-bbe1-4634-9305-ca7d9543ac35-16&btsid=0844ca98-45f0-41d7-bb55-1833f7978391&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)   | 1        |   $1.96 |
+| Red LED                                   | [AliExpress](https://www.aliexpress.com/item/32848810276.html?spm=a2g0o.productlist.0.0.171f3220F091HR&algo_pvid=c14c42e9-d51a-4a9e-89f0-08dd5290a215&algo_expid=c14c42e9-d51a-4a9e-89f0-08dd5290a215-0&btsid=ec5c1224-9eb1-462d-99e7-e5065f9670da&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)    | 1        |   $2.10 |
+| Green LED                                 | See Red LED link                                                                                                                                                                                                                                                                                                    | 1        | ($2.10) |
+| 220Ω resistor                             | [AliExpress](https://www.aliexpress.com/item/32847096736.html?spm=a2g0o.productlist.0.0.1e2d77f6E9aCcA&algo_pvid=6403fdcb-0516-4868-bc73-b871abaa2b44&algo_expid=6403fdcb-0516-4868-bc73-b871abaa2b44-0&btsid=119dfe71-7c7d-48ca-b24d-b4240f17a506&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)    | 12       |   $1.54 |
+| Single Row Right Angle Pin Header         | [AliExpress](https://www.aliexpress.com/item/33038720470.html?spm=a2g0o.productlist.0.0.330f7ee9NRZCNC&algo_pvid=20574285-c96f-4147-948a-941f24c17ea7&algo_expid=20574285-c96f-4147-948a-941f24c17ea7-2&btsid=46693f45-04d0-454a-83de-405c4bd38438&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)    | 11       |   $1.91 |
+| Single Row Pin Header                     | [AliExpress](https://www.aliexpress.com/item/32864438850.html?spm=a2g0o.productlist.0.0.681450a7FeeBYB&algo_pvid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7&algo_expid=4957e0d2-7113-4cf3-a1c0-2b0ad1ee68f7-3&btsid=ea84bad1-90d4-40b7-b416-35f83d260430&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)    | 6        |   $1.15 |
+| Female to Female Jumper wires<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32970738923.html?spm=a2g0o.productlist.0.0.1a901f77473scE&algo_pvid=e09dda4f-6fd1-449f-b578-b6c221d9ad42&algo_expid=e09dda4f-6fd1-449f-b578-b6c221d9ad42-5&btsid=8983d517-3a9c-4c34-a5d8-cce2eef956f6&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)    | 15       |   $1.79 |
+| PerfBoard                                 | [AliExpress](https://www.aliexpress.com/item/4000070053237.html?spm=a2g0o.productlist.0.0.2eec3d788PBCPE&algo_pvid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63&algo_expid=cb5d2bc5-7cc8-4db8-90a0-cf39896c2e63-0&btsid=57cc4798-1fe0-40f7-9108-75111384779f&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)  | 1        |   $4.34 |
+| Nylon 4mm M3 spacer                       | [AliExpress](https://www.aliexpress.com/item/33031794972.html?spm=a2g0o.productlist.0.0.739c41826C2hgY&algo_pvid=4b6e1ee1-2f2c-49f4-9651-4bccf7e3d93d&algo_expid=4b6e1ee1-2f2c-49f4-9651-4bccf7e3d93d-2&btsid=2d11f107-9498-429e-9b07-46bcceeb9a30&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55)    | 6        |   $3.75 |
+| 125x80x32 Project Box<sup>2</sup>         | [AliExpress](https://www.aliexpress.com/item/4000370053139.html?spm=a2g0o.productlist.0.0.408e192bQLTqkU&algo_pvid=97080f62-6f11-4e65-81b8-9a35ded55a47&algo_expid=97080f62-6f11-4e65-81b8-9a35ded55a47-11&btsid=e4c17289-1d4c-4c17-89ac-bb3a64ffd2d2&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1        |   $2.74 |
+|                                           |                                                                                                                                                                                                                                                                                                                     | Total    |  $21.28 |
 
 <sup>1</sup>Ideally look for jumper cable in ribbon style so you can keep bundles together for each circuit.
 <sup>2</sup>The size provided is based on a Raspberry Pi Zero W with an ethernet to micro USB adapter. I suggest you draw everything to size and make sure everything fits before commiting to a project box size.
@@ -61,17 +65,17 @@ All prices include shipping and most of them comes in far greater quantity than 
 
 If it's not your first Raspberry Pi project, you should have most of these item. They will not be permanent to the build and will be reusable afterward.
 
-| Description | Link | Quantity | Price |
-| ----------- | ---- | -------- | -----: |
-| BreadBoard | [AliExpress](https://www.aliexpress.com/item/32785972837.html?spm=a2g0o.productlist.0.0.588066889qfiHt&algo_pvid=35c004a7-f7ef-4c65-97eb-02e0c75670ad&algo_expid=35c004a7-f7ef-4c65-97eb-02e0c75670ad-1&btsid=50ac37d2-b7ec-47da-886d-6547f8840089&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $3.17 |
-| Male-to-Male Jumper wires | See BreadBoard link | 16 | ($3.17) |
-| Raspberry Pi GPIO Extender Shield<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32848985668.html?spm=a2g0o.productlist.0.0.7e095c217oIqpL&algo_pvid=4b476850-da21-4508-becb-ca6b5207066e&algo_expid=4b476850-da21-4508-becb-ca6b5207066e-0&btsid=bd865da9-0e32-4812-8084-7d21c8173138&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1 | $1.80 |
-| BreadBoard power supply<sup>1</sup> | See BreadBoard link | 1 | ($3.17) |
-|  |  | Total | $4.97 |
+| Description                                   | Link                                                                                                                                                                                                                                                                                                             | Quantity |   Price |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------: |
+| BreadBoard                                    | [AliExpress](https://www.aliexpress.com/item/32785972837.html?spm=a2g0o.productlist.0.0.588066889qfiHt&algo_pvid=35c004a7-f7ef-4c65-97eb-02e0c75670ad&algo_expid=35c004a7-f7ef-4c65-97eb-02e0c75670ad-1&btsid=50ac37d2-b7ec-47da-886d-6547f8840089&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1        |   $3.17 |
+| Male-to-Male Jumper wires                     | See BreadBoard link                                                                                                                                                                                                                                                                                              | 16       | ($3.17) |
+| Raspberry Pi GPIO Extender Shield<sup>1</sup> | [AliExpress](https://www.aliexpress.com/item/32848985668.html?spm=a2g0o.productlist.0.0.7e095c217oIqpL&algo_pvid=4b476850-da21-4508-becb-ca6b5207066e&algo_expid=4b476850-da21-4508-becb-ca6b5207066e-0&btsid=bd865da9-0e32-4812-8084-7d21c8173138&ws_ab_test=searchweb0_0,searchweb201602_7,searchweb201603_55) | 1        |   $1.80 |
+| BreadBoard power supply<sup>1</sup>           | See BreadBoard link                                                                                                                                                                                                                                                                                              | 1        | ($3.17) |
+|                                               |                                                                                                                                                                                                                                                                                                                  | Total    |   $4.97 |
 
 <sup>1</sup>These two elements are optional, but helps a lot in the prototyping phase.
 
-### General 
+### General
 
 This list of item are purely equipment that will be need to do the build like I did. You can use any other methods of your likng to get to the same result.
 
@@ -126,16 +130,19 @@ LEDs are a kind of diodes, which means that current can only go through a certai
 When everything is connected and the Raspberry Pi is turned on, run the LEDCheck.py python code. This code will cycle through the 12 LED of the modules. The LED should light up in the following order: LED 1 to 10 of the LED bar graph (in order), green LED, red LED.
 
 When everything is connected to your liking, move to the test folder of the repository
+
 ```
 cd ~/pihole-activity/test
 ```
 
 then run the python script called LEDCycle
+
 ```
 python3 LEDCycle.py
 ```
 
 you should get the following result without errors
+
 ```
 Bar Graph LED 1 on
 Bar Graph LED 2 on
@@ -171,6 +178,7 @@ python3 percentCheck.py
 ```
 
 You should get a similar result as this:
+
 ```
 enabled
 58
@@ -202,6 +210,7 @@ python3 adBlocked.py
 ```
 
 Force your pi-hole to block ads. My personnal test is [speedtest.net](https://www.speedtest.net/). You should get result like that:
+
 ```
 ad Blocked
 ad Blocked
@@ -221,8 +230,8 @@ The following are the permenant modules that we will install in the build. Be ca
 
 #### LED Bar Graph Module
 
-| Front | Back |
-| --- | --- |
+| Front                                                                                                             | Back                                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | <img src="assets/img/CircuitBoard/Pi-Hole_LEDBarGraph-Front.png" alt="LED Bar Graph Module - Front" height="350"> | <img src="assets/img/CircuitBoard/Pi-Hole_LEDBarGraph-Back.png" alt="LED Bar Graph Module - Back" height="350"> |
 
 For the LED Bar Graph, make sure that you know which side is the positive. Remember that an LED is a diode and diode will only let current pass from the positive to the negative and not the other way around. I suggest you place all the complonent in the perfBoard without solder first to verify if you are confortable with the design. After you feel ready to start the soldering, go at it one piece at a time. Always start by securing the corners of parts that have more than two pins.
@@ -235,8 +244,8 @@ After that make sure to connect the resistor>LED and then LED>Pin Header in dist
 
 #### Activity LED Module
 
-| Front | Back |
-| --- | --- |
+| Front                                                                                                            | Back                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | <img src="assets/img/CircuitBoard/Pi-Hole_ActivityLED-front.png" alt="Activity LED Module - Front" height="250"> | <img src="assets/img/CircuitBoard/Pi-Hole_ActivityLED-Back.png" alt="Activity LED Module - Back" height="250"> |
 
 For this module, a slight modification is required to the straight pin header. On a flat surface, press the short pin side until it slip right up to the plastic part. This mod will let us mount the pin header under the perfBoard leting us connect fro the back instead of the front of the module.
@@ -245,8 +254,8 @@ Making the module is very similar to the LED Bar Graph. Make sure the module mak
 
 #### Ground Converger Module
 
-| Front | Back |
-| :---: | :---: |
+|                                                         Front                                                          |                                                         Back                                                         |
+| :--------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 | <img src="assets/img/CircuitBoard/Pi-Hole_GroundConverter-Front.png" alt="Ground Converger Module Front" height="150"> | <img src="assets/img/CircuitBoard\Pi-Hole_GroundConverter-Back.png" alt="Ground Converger Module Back" height="150"> |
 
 This is the simplest of the module. This one is completely optionnal and is only to reduce the footprint on the Raspberry Pi. Basically, we want a module that will simply take all our ground connection into one main ground that will connect to one ground GPIO.
@@ -256,6 +265,16 @@ This is the simplest of the module. This one is completely optionnal and is only
 For this build, the minimum is 3 pins, 2 inputs, 1 output. If you think of any possible expension in the future tu your build, I suggest you already add more ground pins. My build is setup with 5 inputs and 1 output.
 
 ## Installation
+
+### Change boot option
+
+Change boot option to make sure that the user "pi" is autologged-in at boot to force scrypt to run:
+
+```
+sudo raspi-config
+```
+
+From there go in System 1 Options/S2 Boot & Auto Login/B2 Console AutoLogin
 
 ### Run script at startup
 
@@ -284,8 +303,19 @@ Let the Pi-Hole boot, it can take sometime, but the LED will eventually light up
 
 This section will go through the different settings possible in the config.ini file. (I know there is just one right now, I wrote the paragraph for future settings to come)
 
-#### reverseLEDBarGraph
-Lets you reverse the order of the pins for the LED bar graph. If you were to mount the bar graph in reverse by accident of solder backward the connection to your raspberry pi, this setting lets you reverse the order (pin one becomes 10, 2 becomes 9, etc.). Saves you some resoldering. (I'm obviously not talking by experience)
+#### LEDBarGraph
+
+| option             | description                                                                                                                                                                                                                                                                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reverseLEDBarGraph | Lets you reverse the order of the pins for the LED bar graph. If you were to mount the bar graph in reverse by accident or solder backward the connection to your raspberry pi, this setting lets you reverse the order (pin one becomes 10, 2 becomes 9, etc.). Saves you some resoldering. (I'm obviously not talking by experience) |
+| highModeBarGraph   | Lets you change the power mode of the LED bar graph. High Mode means that an input most be high to turn On the LED. Set to true for this behavior. If your circuit expect a low signal to turn on, set to false.                                                                                                                       |
+
+#### StatusLED
+
+| option         | description                                                                                                                                                                                                                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reverseStatus  | Lets you reverse the order of the pins for the status module. If you were to mount the leds in reverse by accident or solder backward the connection to your raspberry pi, this setting lets you reverse the order (pin 37 becomes 35). Saves you some resoldering. (I'm obviously not talking by experience) |
+| highModeStatus | Lets you change the power mode of the status module. High Mode means that an input most be high to turn On the LED. Set to true for this behavior. If your circuit expect a low signal to turn on, set to false.                                                                                              |
 
 ## Enclosing the project
 
